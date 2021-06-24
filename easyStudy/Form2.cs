@@ -25,8 +25,9 @@ namespace easyStudy
             int i = rnd.Next(wordsCount); //Случайное значение из словаря
             label1.Text = wordList.ElementAt(i).Key.ToString();// Прописывание значения в слово, которое нужно перевести
             int wheresRightWord = rnd.Next(4);
-            int a = rnd.Next(wordsCount);
 
+            //три варианта ответа
+            int a = rnd.Next(wordsCount);
             while (a == i)
             {
                 a = rnd.Next(wordsCount);
@@ -34,13 +35,14 @@ namespace easyStudy
             int b = rnd.Next(wordsCount);
             while (b == i || b == a)
             {
-                a = rnd.Next(wordsCount);
+                b = rnd.Next(wordsCount);
             }
             int c = rnd.Next(wordsCount);
             while (c == i || c == a || c == b)
             {
                 c = rnd.Next(wordsCount);
             }
+            //sdhfbsjdhfbsdkjbfksdjbfkdsjbksdbsdkb
             switch (wheresRightWord)
             {
                 case 0:
